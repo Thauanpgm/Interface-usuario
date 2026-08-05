@@ -395,17 +395,89 @@ gap:20px;
 
 }
 
+.brand{
+
+flex-direction:column;
+
+align-items:center;
+
+text-align:center;
+
+}
+
+.logo-box{
+
+width:100%;
+
+max-width:260px;
+
+padding:16px;
+
+}
+
+.logo-img{
+
+width:100%;
+
+max-width:220px;
+
+}
+
 nav ul{
 
 flex-direction:column;
 
 align-items:center;
 
+gap:12px;
+
+}
+
+.hero{
+
+padding:60px 15px;
+
 }
 
 .hero h2{
 
 font-size:2.2rem;
+
+}
+
+.cards{
+
+grid-template-columns:1fr;
+
+margin:40px auto;
+
+}
+
+.card{
+
+padding:24px;
+
+}
+
+.pagina{
+
+width:95%;
+
+margin:30px auto;
+
+}
+
+.pagina section{
+
+padding:24px;
+
+}
+
+.imagem{
+
+max-height:420px;
+
+object-fit:cover;
 
 }
 
