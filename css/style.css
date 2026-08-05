@@ -169,6 +169,7 @@ main {
   line-height: 1.7;
 }
 
+<<<<<<< HEAD
 .hero-actions {
   display: flex;
   gap: 0.8rem;
@@ -192,6 +193,40 @@ main {
   background: #fff;
   color: var(--accent);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+=======
+.card{
+
+    background:#1f2937;
+
+    border-radius:15px;
+
+    padding:30px;
+
+    text-decoration:none;
+
+    color:#e2e8f0;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.35);
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 25px rgba(0,0,0,.35);
+
+}
+
+.card h3{
+
+    color:#60a5fa;
+
+    margin-bottom:15px;
+
+>>>>>>> e6c613f (Ajusta responsividade mobile)
 }
 
 .btn-secondary {
@@ -330,5 +365,71 @@ footer p {
 
   .pagina {
     padding: 1rem;
+    width:95%;
+    margin:30px auto;
+  }
+
+  .hero {
+    padding: 2rem 1rem;
+    border-radius: 20px;
+  }
+
+  .hero h2 {
+    font-size: 2.2rem;
+  }
+
+  .cards {
+    padding: 0 1rem 2rem;
+    grid-template-columns: 1fr;
+    margin: 40px auto;
+    width: 95%;
+  }
+
+  .card {
+    padding: 24px;
+  }
+
+  .pagina section {
+    padding: 24px;
+  }
+
+  .imagem {
+    max-height: 320px;
+    object-fit: cover;
+  }
+
+  figure {
+    margin-bottom: 32px;
+  }
+
+  footer {
+    padding: 30px 15px;
+  }
+
+  body {
+    font-size: 1.15rem;
+  }
+
+  .logo-box {
+    width: 100%;
+    max-width: 260px;
+    padding: 16px;
+  }
+
+  .logo-img {
+    width: 100%;
+    max-width: 220px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  nav a {
+    width: 100%;
+    text-align: center;
   }
 }
+
