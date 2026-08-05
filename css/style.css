@@ -14,12 +14,54 @@
 
 body {
   margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.6;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: var(--text);
   background:
     radial-gradient(circle at top left, rgba(37, 99, 235, 0.2), transparent 28%),
     linear-gradient(135deg, #f8fafc 0%, #eef4ff 45%, #f8fafc 100%);
   min-height: 100vh;
+}
+
+/* Skip link - visible on focus for keyboard users */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus,
+.skip-link:active {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 0.75rem;
+  background: #fff;
+  color: var(--bg);
+  z-index: 2000;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Visible focus for interactive elements */
+:where(a, button, input, textarea, select, summary, [role="button"]) :focus-visible {
+  outline: 3px solid var(--accent-2);
+  outline-offset: 3px;
+}
+
+/* Additional focus rule for cards and custom controls */
+.card:focus-visible,
+.btn-primary:focus-visible,
+.btn-secondary:focus-visible,
+.menu-toggle:focus-visible {
+  outline: 3px solid var(--accent-2);
+  outline-offset: 3px;
 }
 
 a { color: inherit; }
@@ -198,33 +240,6 @@ main {
   background: rgba(255, 255, 255, 0.16);
   color: #fff;
   border: 1px solid rgba(255, 255, 255, 0.25);
-}
-
-.btn-primary:hover,
-.btn-secondary:hover {
-  transform: translateY(-2px);
-}
-
-.card {
-  display: block;
-  padding: 1.25rem;
-  border-radius: 20px;
-  background: var(--card);
-  color: var(--text);
-  text-decoration: none;
-  box-shadow: var(--shadow);
-  border: 1px solid var(--border);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 35px rgba(2, 6, 23, 0.16);
-}
-
-.card h3 {
-  margin: 0 0 0.4rem;
-  color: var(--accent-2);
 }
 
 .btn-primary:hover,
